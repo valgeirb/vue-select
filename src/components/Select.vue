@@ -1068,6 +1068,8 @@ export default {
 
       if (this.open && targetIsNotSearch) {
         this.searchEl.blur()
+      } else if (this.open && !targetIsNotSearch && !this.searchable) {
+        this.open = false
       } else if (!this.disabled) {
         this.open = true
         this.searchEl.focus()
